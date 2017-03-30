@@ -1,3 +1,3 @@
 シンボリックリンク
-$ chmod +x dotfilesLink.sh
-$ ./dotfilesLink.sh
+$ chmod +x setup.sh
+$ ./setup.sh

@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 ".pyのコメントアウトを#で
 autocmd Filetype python setlocal commentstring=#\ %s
 
