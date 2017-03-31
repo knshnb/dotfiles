@@ -1,3 +1,4 @@
+
 ".pyのコメントアウトを#で
 autocmd Filetype python setlocal commentstring=#\ %s
 
