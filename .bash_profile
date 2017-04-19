@@ -1,3 +1,4 @@
+# .bashrcの反映を自動化
 if [ -f ~/.bashrc ] ; then
 . ~/.bashrc
 fi

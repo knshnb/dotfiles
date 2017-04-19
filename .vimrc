@@ -28,8 +28,10 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 
+
 ".pyのコメントアウトを#で
 autocmd Filetype python setlocal commentstring=#\ %s
+
 
 "バックスペースを有効に
 set backspace=indent,eol,start
