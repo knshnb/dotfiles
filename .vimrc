@@ -19,6 +19,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'vim-scripts/dbext.vim'
 
 call neobundle#end()
 
@@ -29,8 +30,11 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 
 
-".pyのコメントアウトを#で
+"commentary-vim .pyのコメントアウトを#で
 autocmd Filetype python setlocal commentstring=#\ %s
+
+"dbext MySQL
+let g:dbext_default_profile_mySQL = 'type=MYSQL:srvname=localhost:user=root:passwd=:dbname=test'
 
 
 "バックスペースを有効に
