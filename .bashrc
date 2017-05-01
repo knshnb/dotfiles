@@ -1,6 +1,9 @@
 alias g="g++ -Wall -Wextra -O2 -g -Wl,--stack=268435456 -D LOCAL -std=c++11"
 alias ll='ls -t -l -F -G -al'
-alias o='open .'
+cd ()
+{
+    builtin cd "$@" && ll
+}
 
 if [ $UID -eq 0 ]; then
     PS1="\[\033[31m\]\w\\$ "
