@@ -47,6 +47,11 @@ set clipboard=unnamed,autoselect
 set expandtab "タブの代わりにスペースを挿入
 set shiftwidth=4 "自動インデントのスペース数
 set softtabstop=4 "タブキーのスペース数
+"Makefileに対してはタブをそのまま使う
+let _curfile=expand("%:r")
+if _curfile == 'Makefile'
+  set noexpandtab
+endif
 
 "#####表示設定#####
 set number "行番号を表示する
