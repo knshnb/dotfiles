@@ -15,4 +15,3 @@ if [ $UID -eq 0 ]; then
 else
     PS1="\[\033[36m\]\w\\$ "
 fi
-
