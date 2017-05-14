@@ -74,6 +74,9 @@ nnoremap Y y$
 "display設定
 set display=lastline
 
+"検索時のハイライト
+set hlsearch
+
 "対応する括弧に0.1秒ジャンプ
 set showmatch
 set matchtime=1
