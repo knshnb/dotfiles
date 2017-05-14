@@ -36,6 +36,9 @@ autocmd Filetype python setlocal commentstring=#\ %s
 "dbext MySQL
 let g:dbext_default_profile_mySQL = 'type=MYSQL:srvname=localhost:user=root:passwd=:dbname=test'
 
+"最下行の表示設定
+:set laststatus=2
+:set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
 "バックスペースを有効に
 set backspace=indent,eol,start
