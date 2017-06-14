@@ -3,6 +3,7 @@ alias ll='ls -t -l -F -G -al'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ocaml="rlwrap ocaml"
+alias vim="vim -p"
 
 # cdが成功したら自動でll
 cd ()
