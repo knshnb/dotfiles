@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/tansei/dotfiles/.vim/bundle/systemverilog.vim/indent'
 let g:netrw_dirhist_2='/home/tansei/dotfiles/.vim/bundle/systemverilog.vim'
 let g:netrw_dirhist_3='/home/tansei/dotfiles/.vim/bundle/systemverilog.vim/ftdetect'
 let g:netrw_dirhist_4='/home/tansei/dotfiles/.vim/bundle/.neobundle'
 let g:netrw_dirhist_5='/home/tansei/is/hardware/08/uart_loopback_kit/test_uart_loopback_9600'
+let g:netrw_dirhist_6='/Users/abekenshin/programming/Atcoder/ARC075'
