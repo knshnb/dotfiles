@@ -1,11 +1,19 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhist_cnt =9
+=======
+let g:netrw_dirhist_cnt =6
+>>>>>>> 0ee54460d1bf5a04aa59bc822481d663eb730750
 let g:netrw_dirhist_1='/home/tansei/dotfiles/.vim/bundle/systemverilog.vim/indent'
 let g:netrw_dirhist_2='/home/tansei/dotfiles/.vim/bundle/systemverilog.vim'
 let g:netrw_dirhist_3='/home/tansei/dotfiles/.vim/bundle/systemverilog.vim/ftdetect'
 let g:netrw_dirhist_4='/home/tansei/dotfiles/.vim/bundle/.neobundle'
 let g:netrw_dirhist_5='/home/tansei/is/hardware/08/uart_loopback_kit/test_uart_loopback_9600'
+<<<<<<< HEAD
 let g:netrw_dirhist_6='/home/tansei/is/hardware/09/axi_archive/eval_datamover_axi'
 let g:netrw_dirhist_7='/home/tansei/is/hardware/09/axi_archive/eval_datamover_axi_ic'
 let g:netrw_dirhist_8='/home/tansei/is/hardware/09/axi_archive/eval_datamover_axi_impl'
 let g:netrw_dirhist_9='/home/tansei/is/hardware/09/axi_archive/non_axi_example'
+=======
+let g:netrw_dirhist_6='/Users/abekenshin/programming/Atcoder/ARC075'
+>>>>>>> 0ee54460d1bf5a04aa59bc822481d663eb730750

@@ -97,3 +97,6 @@ if &term =~ "xterm"
     cnoremap <special> <Esc>[200~ <nop>
     cnoremap <special> <Esc>[201~ <nop>
 endif
+
+"マウスを有効に
+set mouse=a
