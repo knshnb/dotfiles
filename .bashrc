@@ -12,10 +12,11 @@ cd ()
 }
 
 if [ $UID -eq 0 ]; then
-    PS1="\[\033[31m\]\w\\$ "
+    PS1="\[\033[31m\]\w\$\[\e[0m\] "
 else
-    PS1="\[\033[36m\]\w\\$ "
+    PS1="\[\033[36m\]\w\$\[\e[0m\] "
 fi
+PS1="\[\e[36m\]\w\$\[\e[0m\] "
 
 # lazygit
 function lazygit() {
