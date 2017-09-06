@@ -1,3 +1,4 @@
 dbext.vim
 neobundle.vim
 vim-commentary
+vim-quickrun

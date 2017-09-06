@@ -20,6 +20,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'vim-scripts/dbext.vim'
+NeoBundle 'thinca/vim-quickrun'
 
 call neobundle#end()
 
@@ -48,8 +49,8 @@ set clipboard=unnamed,autoselect
 
 "タブ関連
 set expandtab "タブの代わりにスペースを挿入
-set shiftwidth=4 "自動インデントのスペース数
-set softtabstop=4 "タブキーのスペース数
+set shiftwidth=2 "自動インデントのスペース数
+set softtabstop=2 "タブキーのスペース数
 "Makefileに対してはタブをそのまま使う
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
