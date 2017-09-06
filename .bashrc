@@ -16,7 +16,6 @@ if [ $UID -eq 0 ]; then
 else
     PS1="\[\033[36m\]\w\$\[\e[0m\] "
 fi
-PS1="\[\e[36m\]\w\$\[\e[0m\] "
 
 # lazygit
 function lazygit() {
