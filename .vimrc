@@ -21,6 +21,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'thinca/vim-quickrun'
+let g:quickrun_config = {}
+let g:quickrun_config['markdown'] = {
+  \ 'outputter': 'browser',
+  \ 'command' : 'pandoc',
+  \ }
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'tyru/open-browser.vim'
 
 call neobundle#end()
 
