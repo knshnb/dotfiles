@@ -28,6 +28,7 @@ let g:quickrun_config['markdown'] = {
   \ }
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'Shougo/unite.vim'
 
 call neobundle#end()
 
