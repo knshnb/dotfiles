@@ -109,3 +109,6 @@ endif
 
 "マウスを有効に
 set mouse=a
+
+"swapファイルを作成しない"
+set noswapfile
