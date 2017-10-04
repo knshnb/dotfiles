@@ -44,7 +44,7 @@ filetype plugin indent on
 command! -nargs=0 JediRename :call jedi#rename()
 " pythonのrename用のマッピングがquickrunとかぶるため回避させる
 let g:jedi#rename_command = ""
-let g:jedi#pydoc = "k"
+let g:jedi#documentation_command = "<C-k>"
 
 " merlinによるコード補完
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
