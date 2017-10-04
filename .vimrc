@@ -38,6 +38,9 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 
+" merlinによるコード補完
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute 'set rtp+=' . g:opamshare . '/merlin/vim'
 
 "commentary-vim .pyのコメントアウトを#で
 autocmd Filetype python setlocal commentstring=#\ %s
