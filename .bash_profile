@@ -11,3 +11,5 @@ export PATH
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 eval "$(pyenv init -)"
+
+export PATH="$HOME/.cargo/bin:$PATH"
