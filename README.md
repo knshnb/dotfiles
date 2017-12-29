@@ -4,6 +4,7 @@
 
 ```bash
 $ git clone https://github.com/bknshn/dotfiles
+$ cd dotfiles
 ```
 
 2. create a symbolic link
