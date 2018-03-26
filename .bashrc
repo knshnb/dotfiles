@@ -5,8 +5,6 @@ alias ...="cd ../.."
 alias ocaml="rlwrap ocaml"
 alias vim="vim -p"
 
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-
 # cdが成功したら自動でll
 cd ()
 {
