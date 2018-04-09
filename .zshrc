@@ -21,6 +21,11 @@ function template() {
   cp ~/dotfiles/.competitive_template.cpp "$1.cpp"
 }
 
+if [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
+  # open pdf files in linux
+  alias open="xdg-open"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
