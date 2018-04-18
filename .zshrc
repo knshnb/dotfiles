@@ -1,3 +1,5 @@
+fortune | cowsay | lolcat
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/dotfiles/.oh-my-zsh
 
