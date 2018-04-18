@@ -4,12 +4,13 @@
 #define REPI(i, a, b) for (ll (i) = (a); (i) < (b); (i)++)
 #define P pair<ll, ll>
 #define VI vector<ll>
+#define int long long
 using namespace std;
 
 void solve() {
 }
 
-int main() {
+signed main() {
 
   solve();
 }
