@@ -29,7 +29,6 @@ let g:quickrun_config['markdown'] = {
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'racer-rust/vim-racer'
 NeoBundle 'rust-lang/rust.vim'
 
@@ -40,13 +39,6 @@ filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-
-" jedi(Pythonの補完)用
-" rename用のマッピングを無効にしたため、代わりにコマンドを定義
-command! -nargs=0 JediRename :call jedi#rename()
-" pythonのrename用のマッピングがquickrunとかぶるため回避させる
-let g:jedi#rename_command = ""
-let g:jedi#documentation_command = "<C-k>"
 
 " merlinによるコード補完
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
