@@ -1,4 +1,4 @@
-fortune | cowsay | lolcat
+# fortune | cowsay | lolcat
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/dotfiles/.oh-my-zsh
@@ -114,3 +114,4 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
