@@ -6,3 +6,4 @@ ln -s ~/dotfiles/.vim ~/.vim
 ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
+ln -s ~/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json
