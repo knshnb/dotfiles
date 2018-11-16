@@ -1,4 +1,24 @@
 {
+    "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p", // タグ内の記述はフォーマットしない
+    "html.format.extraLiners": "", // head, body, /html タグの前に改行を入れない
+    "html.format.unformatted": null, // フレージング・コンテンツ（旧インライン要素のようなタグ）はフォーマットしない
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2, // タブのサイズ変更
     "editor.minimap.enabled": false,
+    "markdown-pdf.convertOnSave": true,
+    "markdown-pdf.displayHeaderFooter": false,
+    "window.zoomLevel": 0,
+    // "vim.useSystemClipboard": true, // システムのclipboardにコピー
+    "vim.visualstar": true,
     "vim.hlsearch": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ -O0 -std=c++14 -D_GLIBCXX_DEBUG $fileName && ./a.out",
+    },
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.preserveFocus": false,
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    "workbench.sideBar.location": "left",
+    "workbench.startupEditor": "newUntitledFile",
 }
