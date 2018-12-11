@@ -13,7 +13,7 @@
     "vim.hlsearch": true,
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
-        "cpp": "cd $dir && g++ -O0 -std=c++14 -D_GLIBCXX_DEBUG $fileName && ./a.out",
+        "cpp": "cd $dir && g++ -O0 -std=c++14 -D_MY_DEBUG -D_GLIBCXX_DEBUG $fileName && ./a.out",
     },
     "code-runner.saveFileBeforeRun": true,
     "code-runner.preserveFocus": false,
@@ -21,4 +21,5 @@
     "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "left",
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.panel.defaultLocation": "right",
 }
