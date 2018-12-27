@@ -25,4 +25,5 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.editor": "json",
+    "python.pythonPath": "/usr/local/bin/python3"
 }
