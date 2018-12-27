@@ -12,3 +12,6 @@ set hlsearch
 
 " Escの2回押しでハイライト消去
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+
+" surround vim
+set surround

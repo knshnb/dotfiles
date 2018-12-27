@@ -11,6 +11,8 @@
     // "vim.useSystemClipboard": true, // システムのclipboardにコピー
     "vim.visualstar": true,
     "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
         "cpp": "cd $dir && g++ -O0 -std=c++14 -D_MY_DEBUG -D_GLIBCXX_DEBUG $fileName && ./a.out",
@@ -22,4 +24,5 @@
     "workbench.sideBar.location": "left",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.panel.defaultLocation": "right",
+    "workbench.settings.editor": "json",
 }

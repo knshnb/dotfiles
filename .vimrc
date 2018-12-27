@@ -31,6 +31,8 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'racer-rust/vim-racer'
 NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'surround.vim'
+NeoBundle 'Lokaltog/vim-easymotion'
 
 call neobundle#end()
 
