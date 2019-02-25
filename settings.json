@@ -5,7 +5,7 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 2, // タブのサイズ変更
     "editor.minimap.enabled": false,
-    "markdown-pdf.convertOnSave": true,
+    "markdown-pdf.convertOnSave": false,
     "markdown-pdf.displayHeaderFooter": false,
     "window.zoomLevel": 0,
     // "vim.useSystemClipboard": true, // システムのclipboardにコピー
@@ -16,6 +16,8 @@
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
         "cpp": "cd $dir && g++ -O0 -std=c++14 -D_MY_DEBUG -D_GLIBCXX_DEBUG $fileName && ./a.out",
+        // "python": "cd $dir && source env/bin/activate && python $fileName",
+        "python": "$pythonPath $fullFileName",
     },
     "code-runner.saveFileBeforeRun": true,
     "code-runner.preserveFocus": false,
@@ -25,5 +27,22 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.editor": "json",
-    "python.pythonPath": "/usr/local/bin/python3"
+    "python.pythonPath": "/usr/local/bin/python3",
+    "cSpell.enabledLanguageIds": [
+        "latex",
+    ],
+    "[python]": {
+        "editor.tabSize": 4,
+    },
+    "sshfs.configs": [
+        {
+            "label": "kernel MIS solver",
+            "root": "/home/ubuntu/research/MIS_GCN_solver/",
+            "host": "ec2-18-220-209-27.us-east-2.compute.amazonaws.com",
+            "port": 2211,
+            "username": "ubuntu",
+            "password": true,
+            "name": "kernel_p2_xlarge"
+        }
+    ],
 }

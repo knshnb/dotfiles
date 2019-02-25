@@ -10,6 +10,7 @@ using namespace std;
 using ll = long long;
 using II = pair<int, int>; using VII = vector<II>; using VVII = vector<VII>;
 using VI = vector<int>; using VVI = vector<VI>; using VVVI = vector<VVI>;
+template <class T> using V = vector<T>; template <class T> using VV = V<V<T>>; template <class T> using VVV = V<VV<T>>;
 template <class T = int> inline bool chmax(T &a, const T &b) { if (a < b) { a = b; return true; } return false; }
 template <class T = int> inline bool chmin(T &a, const T &b) { if (a > b) { a = b; return true; } return false; }
 template <class T> ostream& operator<<(ostream &s, const vector<T>& d) { REP (i, d.size()) s << d[i] << (i == d.size() - 1 ? "" : " "); return s; }
@@ -24,6 +25,7 @@ template <class T, class S> ostream& operator<<(ostream& s, const map<T, S> m) {
 void dump_func() { cerr << endl; }
 template <class Head, class... Tail> void dump_func(Head&& h, Tail&&... t) { cerr << h << (sizeof...(Tail) == 0 ? "" : ", "), dump_func(forward<Tail>(t)...); }
 struct Fast { Fast() { cin.tie(0); ios::sync_with_stdio(false); } } fast;
+mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 constexpr int MOD = 1e9 + 7;
 
 signed main() {

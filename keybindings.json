@@ -1,0 +1,29 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.tasks.runTask",
+    "when": "editorTextFocus",
+    "args": "AtCoder Test"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.tasks.runTask",
+    "when": "editorTextFocus",
+    "args": "AtCoder Submit"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "code-runner.run"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "terminalFocus"
+  }
+]

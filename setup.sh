@@ -7,3 +7,5 @@ ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
 ln -s ~/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/dotfiles/keybindings.json ~//Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/dotfiles/.competitive_template.cpp ~/.competitive_template.cpp
