@@ -45,4 +45,5 @@
             "name": "kernel_p2_xlarge"
         }
     ],
+    "editor.acceptSuggestionOnCommitCharacter": false,
 }
