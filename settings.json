@@ -3,7 +3,7 @@
     "html.format.extraLiners": "", // head, body, /html タグの前に改行を入れない
     "html.format.unformatted": null, // フレージング・コンテンツ（旧インライン要素のようなタグ）はフォーマットしない
     "editor.insertSpaces": true,
-    "editor.tabSize": 2, // タブのサイズ変更
+    "editor.tabSize": 4, // タブのサイズ変更
     "editor.minimap.enabled": false,
     "markdown-pdf.convertOnSave": false,
     "markdown-pdf.displayHeaderFooter": false,
@@ -27,6 +27,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultSettings": true,
     "python.pythonPath": "/usr/local/bin/python3",
     "cSpell.enabledLanguageIds": [
         "latex",
@@ -46,4 +47,5 @@
         }
     ],
     "editor.acceptSuggestionOnCommitCharacter": false,
+    "C_Cpp.updateChannel": "Insiders",
 }

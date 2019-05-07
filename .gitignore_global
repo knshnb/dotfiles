@@ -15,7 +15,8 @@ Session.vim
 .netrwhist
 *~
 # Auto-generated tag files
-tags
+# Hugoでtagsというディレクトリが生成されるためコメントアウト
+# tags
 
 
 # Mac OS
