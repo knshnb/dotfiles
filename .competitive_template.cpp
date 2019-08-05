@@ -13,9 +13,9 @@ template <class T> using treap = tree<T, null_type, less<T>, rb_tree_tag, tree_o
 #define se second
 using ii = pair<int, int>;
 vector<ii> dirs = {
-  {1, 0}, {0, 1}, {-1, 0}, {0, -1},  // 4方向
-  {1, 1}, {-1, 1}, {-1, -1}, {1, -1},  // 斜め
-  {0, 0},  // 自身
+    {1, 0}, {0, 1}, {-1, 0}, {0, -1},  // 4方向
+    {1, 1}, {-1, 1}, {-1, -1}, {1, -1},  // 斜め
+    {0, 0},  // 自身
 };
 template <class T> inline bool chmax(T& a, const T& b) { if (a < b) { a = b; return true; } return false; }
 template <class T> inline bool chmin(T& a, const T& b) { if (a > b) { a = b; return true; } return false; }
@@ -29,10 +29,10 @@ template <class T, class S> ostream& operator<<(ostream& s, pair<T, S>& p) { s <
 template <class T, class S> ostream& operator<<(ostream& s, map<T, S> m) { for (auto it = m.begin(); it != m.end(); it++) { s << *it << (next(it) == m.end() ? "" : "\n"); } return s; }
 template <class T, class S> ostream& operator<<(ostream& s, unordered_map<T, S> m) { for (auto it = m.begin(); it != m.end(); it++) { s << *it << (next(it) == m.end() ? "" : "\n"); } return s; }
 #ifdef _MY_DEBUG
-  #define dump(...) cerr << "/* " << #__VA_ARGS__ << " :[" << __LINE__ << ":" << __FUNCTION__ << "]" << endl, dump_func(__VA_ARGS__), cerr << "*/\n\n";
+    #define dump(...) cerr << "/* " << #__VA_ARGS__ << " :[" << __LINE__ << ":" << __FUNCTION__ << "]" << endl, dump_func(__VA_ARGS__), cerr << "*/\n\n";
 #else
-  #define dump(...)
-  #define endl "\n"
+    #define dump(...)
+    #define endl "\n"
 #endif
 void dump_func() { cerr << endl; }
 template <class Head, class... Tail> void dump_func(Head&& h, Tail&&... t) { cerr << h << (sizeof...(Tail) == 0 ? "" : ", "), dump_func(forward<Tail>(t)...); }

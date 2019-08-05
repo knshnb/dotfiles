@@ -1,4 +1,5 @@
 # fortune | cowsay | lolcat
+export LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/dotfiles/.oh-my-zsh
@@ -12,11 +13,11 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 alias vim="vim -p"
-# automatically 'll' after cd
-cd ()
-{
-    builtin cd "$@" && ll
-}
+# # automatically 'll' after cd
+# cd ()
+# {
+    # builtin cd "$@" && ll
+# }
 export PATH="$HOME/.cargo/bin:$PATH"
 
 function template() {
@@ -28,8 +29,7 @@ if [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
   alias open="xdg-open"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
