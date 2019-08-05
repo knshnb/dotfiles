@@ -1,5 +1,9 @@
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 using namespace std;
+using namespace __gnu_pbds;
+template <class T> using treap = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 #define int long long
 #define REP(i, n) for (long long i = 0, max_i = (n); i < max_i; i++)
 #define REPI(i, a, b) for (long long i = (a), max_i = (b); i < max_i; i++)
@@ -23,6 +27,7 @@ template <class T> ostream& operator<<(ostream& s, vector<T>& d) { REP (i, d.siz
 template <class T> ostream& operator<<(ostream& s, vector<vector<T>>& d) { REP (i, d.size()) s << d[i] << (i == d.size() - 1 ? "" : "\n"); return s; }
 template <class T, class S> ostream& operator<<(ostream& s, pair<T, S>& p) { s << "{" << p.first << ", " << p.second << "}"; return s; }
 template <class T, class S> ostream& operator<<(ostream& s, map<T, S> m) { for (auto it = m.begin(); it != m.end(); it++) { s << *it << (next(it) == m.end() ? "" : "\n"); } return s; }
+template <class T, class S> ostream& operator<<(ostream& s, unordered_map<T, S> m) { for (auto it = m.begin(); it != m.end(); it++) { s << *it << (next(it) == m.end() ? "" : "\n"); } return s; }
 #ifdef _MY_DEBUG
   #define dump(...) cerr << "/* " << #__VA_ARGS__ << " :[" << __LINE__ << ":" << __FUNCTION__ << "]" << endl, dump_func(__VA_ARGS__), cerr << "*/\n\n";
 #else

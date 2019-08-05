@@ -48,4 +48,5 @@
     ],
     "editor.acceptSuggestionOnCommitCharacter": false,
     "C_Cpp.updateChannel": "Insiders",
+	"C_Cpp.intelliSenseCacheSize": 16,
 }
