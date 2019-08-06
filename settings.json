@@ -48,5 +48,8 @@
     ],
     "editor.acceptSuggestionOnCommitCharacter": false,
     "C_Cpp.updateChannel": "Insiders",
-	"C_Cpp.intelliSenseCacheSize": 16,
+    "C_Cpp.intelliSenseCacheSize": 16,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
 }

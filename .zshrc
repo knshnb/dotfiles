@@ -3,6 +3,7 @@ export LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/dotfiles/.oh-my-zsh
+export LC_ALL=en_US.UTF-8
 
 ZSH_THEME="robbyrussell"
 
@@ -19,6 +20,7 @@ alias vim="vim -p"
     # builtin cd "$@" && ll
 # }
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
 function template() {
   cp ~/dotfiles/.competitive_template.cpp "$1.cpp"
