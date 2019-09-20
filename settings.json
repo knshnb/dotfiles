@@ -31,6 +31,7 @@
     "python.pythonPath": "/usr/local/bin/python3",
     "cSpell.enabledLanguageIds": [
         "latex",
+        "markdown",
     ],
     "[python]": {
         "editor.tabSize": 4,
@@ -44,4 +45,6 @@
     "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
     "editor.autoClosingOvertype": "always",
+    "git.autofetch": true,
+	"autoDocstring.docstringFormat": "google",
 }
