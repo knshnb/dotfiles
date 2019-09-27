@@ -26,6 +26,8 @@ template <class T, class... Ts> auto make_vec(size_t n, Ts... ts) { return vecto
 template <class T> ostream& operator<<(ostream& s, vector<T>& d) { REP (i, d.size()) s << d[i] << (i == d.size() - 1 ? "" : " "); return s; }
 template <class T> ostream& operator<<(ostream& s, vector<vector<T>>& d) { REP (i, d.size()) s << d[i] << (i == d.size() - 1 ? "" : "\n"); return s; }
 template <class T, class S> ostream& operator<<(ostream& s, pair<T, S>& p) { s << "{" << p.first << ", " << p.second << "}"; return s; }
+template <class T> ostream& operator<<(ostream& s, set<T> m) { for (auto it = m.begin(); it != m.end(); it++) { s << *it << (next(it) == m.end() ? "" : "\n"); } return s; }
+template <class T> ostream& operator<<(ostream& s, multiset<T> m) { for (auto it = m.begin(); it != m.end(); it++) { s << *it << (next(it) == m.end() ? "" : "\n"); } return s; }
 template <class T, class S> ostream& operator<<(ostream& s, map<T, S> m) { for (auto it = m.begin(); it != m.end(); it++) { s << *it << (next(it) == m.end() ? "" : "\n"); } return s; }
 template <class T, class S> ostream& operator<<(ostream& s, unordered_map<T, S> m) { for (auto it = m.begin(); it != m.end(); it++) { s << *it << (next(it) == m.end() ? "" : "\n"); } return s; }
 #ifdef _MY_DEBUG
@@ -37,7 +39,7 @@ template <class T, class S> ostream& operator<<(ostream& s, unordered_map<T, S> 
 void dump_func() { cerr << endl; }
 template <class Head, class... Tail> void dump_func(Head&& h, Tail&&... t) { cerr << h << (sizeof...(Tail) == 0 ? "" : ", "), dump_func(forward<Tail>(t)...); }
 
-struct Fast { Fast() { cin.tie(0); ios::sync_with_stdio(false); } } fast;
+struct Fast { Fast() { cin.tie(nullptr); ios::sync_with_stdio(false); } } fast;
 mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 constexpr int MOD = 1000000007;
 // *************** TEMPLATE END *************** 
