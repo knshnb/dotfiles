@@ -47,7 +47,7 @@ template <class T, class S> ostream& operator<<(ostream& s, const unordered_map<
 void dump_func() { cerr << endl; }
 template <class Head, class... Tail> void dump_func(Head&& h, Tail&&... t) { cerr << h << (sizeof...(Tail) == 0 ? "" : ", "), dump_func(forward<Tail>(t)...); }
 
-struct FastIO { FastIO() { cin.tie(nullptr); ios::sync_with_stdio(false); } } fast_io;
+struct FastIO { FastIO() { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed << setprecision(20); } } fast_io;
 mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 constexpr Int MOD = 1000000007;
 // **********************************************************************************************
