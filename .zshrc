@@ -24,6 +24,7 @@ export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
 function template() {
   cp ~/dotfiles/.competitive_template.cpp "$1.cpp"
+  sed -i "" "s/CREATED_TIMESTAMP/$(date)/g" "$1.cpp"
 }
 
 if [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
