@@ -22,14 +22,17 @@ struct SetupIO {
     SetupIO() { cin.tie(nullptr), ios::sync_with_stdio(false), cout << fixed << setprecision(20); }
 } setup_io;
 
-template <class T> std::ostream& print(std::ostream& out, T const& val) { return (out << val << " "); }
-template <class T1, class T2> std::ostream& print(std::ostream& out, std::pair<T1, T2> const& val) {
-    return (out << "{" << val.first << " " << val.second << "} ");
-}
 template <template <class, class...> class TT, class... Args>
-std::ostream& operator<<(std::ostream& out, TT<Args...> const& cont) {
-    for (auto&& elem : cont) print(out, elem);
+ostream& operator<<(ostream& out, TT<Args...> const& cont) {
+    for (auto&& elem : cont) out << elem << " ";
     return out;
+}
+template <class T> ostream& operator<<(ostream& out, const vector<vector<T>>& vs) {
+    for (auto&& v : vs) cout << v << endl;
+    return out;
+}
+template <class T1, class T2> ostream& operator<<(ostream& out, pair<T1, T2> const& val) {
+    return (out << "{" << val.first << " " << val.second << "}");
 }
 
 void dump_func() { cerr << endl; }
