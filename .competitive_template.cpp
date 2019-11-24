@@ -18,6 +18,21 @@ template <class T> inline bool chmin(T& a, const T& b) {
     a = b;
     return true;
 }
+struct in {
+    int n;
+    in() {}
+    in(int n_) : n(n_){};
+    template <class T> operator T() {
+        T ret;
+        cin >> ret;
+        return ret;
+    }
+    template <class T> operator vector<T>() {
+        vector<T> ret(n);
+        for (int i = 0; i < n; i++) cin >> ret[i];
+        return ret;
+    }
+};
 struct SetupIO {
     SetupIO() { cin.tie(nullptr), ios::sync_with_stdio(false), cout << fixed << setprecision(20); }
 } setup_io;
