@@ -13,3 +13,4 @@ ln -s ~/dotfiles/keybindings.json ~/Library/Application\ Support/Code\ -\ Inside
 ln -s ~/dotfiles/cpp.json ~/Library/Application\ Support/Code/User/snippets/cpp.json
 ln -s ~/dotfiles/cpp.json ~/Library/Application\ Support/Code\ -\ Insiders/User/snippets/cpp.json
 ln -s ~/dotfiles/.competitive_template.cpp ~/.competitive_template.cpp
+ln -s ~/dotfiles/.competitive_local.hpp ~/.competitive_local.hpp
