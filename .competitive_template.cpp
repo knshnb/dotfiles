@@ -2,8 +2,10 @@
 using namespace std;
 using Int = long long;
 using pii = pair<Int, Int>;
-#define REP(i, n) for (Int i = 0, max_i = (n); i < max_i; i++)
-#define REPI(i, a, b) for (Int i = (a), max_i = (b); i < max_i; i++)
+#define REP2(i, n) for (Int i = 0, max_i = (n); i < max_i; i++)
+#define REP3(i, a, b) for (Int i = (a), max_i = (b); i < max_i; i++)
+#define OVERLOAD2(_1, _2, _3, name, ...) name
+#define REP(...) OVERLOAD2(__VA_ARGS__, REP3, REP2)(__VA_ARGS__)
 template <class T> inline bool chmax(T& a, const T& b) {
     if (a >= b) return false;
     a = b;
