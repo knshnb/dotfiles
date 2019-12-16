@@ -1,13 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 using Int = long long;
+using pii = pair<Int, Int>;
 #define REP(i, n) for (Int i = 0, max_i = (n); i < max_i; i++)
 #define REPI(i, a, b) for (Int i = (a), max_i = (b); i < max_i; i++)
-#define ALL(obj) begin(obj), end(obj)
-#define RALL(obj) rbegin(obj), rend(obj)
-#define fi first
-#define se second
-using ii = pair<Int, Int>;
 template <class T> inline bool chmax(T& a, const T& b) {
     if (a >= b) return false;
     a = b;
