@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 using Int = long long;
-using pii = pair<Int, Int>;
 #define REP2(i, n) for (Int i = 0, max_i = (n); i < max_i; i++)
 #define REP3(i, a, b) for (Int i = (a), max_i = (b); i < max_i; i++)
 #define OVERLOAD2(_1, _2, _3, name, ...) name
