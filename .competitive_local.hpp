@@ -1,3 +1,4 @@
+#include <bits/stdc++.h>
 using namespace std;
 
 string to_string(const string &s) { return '"' + s + '"'; }
@@ -16,6 +17,16 @@ template <class A, class B> string to_string(pair<A, B> p) {
 template <class A, class B, class C> string to_string(tuple<A, B, C> p) {
     return "(" + to_string(get<0>(p)) + ", " + to_string(get<1>(p)) + ", " + to_string(get<2>(p)) + ")";
 }
+string to_string(vector<bool> v) {
+    bool first = true;
+    string res = "{";
+    for (auto &&x : v) {
+        if (!first) res += ", ";
+        first = false, res += to_string(x);
+    }
+    return res += "}";
+}
+
 template <class A> string to_string(A v) {
     bool first = true;
     string res = "{";
