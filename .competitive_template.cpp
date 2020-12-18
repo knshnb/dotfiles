@@ -1,14 +1,28 @@
-#include <bits/stdc++.h>  // clang-format off
-using namespace std;
-using Int = long long;
-#define REP2(i, n) for (Int i = 0, max_i = (n); i < max_i; i++)
-#define REP3(i, a, b) for (Int i = (a), max_i = (b); i < max_i; i++)
-#define OVERLOAD2(_1, _2, _3, name, ...) name
-#define REP(...) OVERLOAD2(__VA_ARGS__, REP3, REP2)(__VA_ARGS__)
-struct SetupIO { SetupIO() { cin.tie(nullptr), ios::sync_with_stdio(false), cout << fixed << setprecision(13); } } setup_io;
-#ifndef _MY_DEBUG
+#include <bits/stdc++.h>
+using Int = long long;  // clang-format off
+#define REP_(i, a_, b_, a, b, ...) for (Int i = (a), lim##i = (b); i < lim##i; i++)
+#define REP(i, ...) REP_(i, __VA_ARGS__, __VA_ARGS__, 0, __VA_ARGS__)
+#define RREP_(i, a_, b_, a, b, ...) for (Int i = Int(b) - 1, low##i = (a); i >= low##i; i--)
+#define RREP(i, ...) RREP_(i, __VA_ARGS__, __VA_ARGS__, 0, __VA_ARGS__)
+#define ALL(v) std::begin(v), std::end(v)
+struct SetupIO { SetupIO() { std::cin.tie(nullptr), std::ios::sync_with_stdio(false), std::cout << std::fixed << std::setprecision(13); } } setup_io;
+#ifndef dump
 #define dump(...)
 #endif  // clang-format on
+struct in {
+    template <class T> operator T() {
+        T t;
+        std::cin >> t;
+        return t;
+    }
+};
+void out() { std::cout << "\n"; }
+template <class Head, class... Tail> void out(Head&& h, Tail&&... t) {
+    std::cout << h << (sizeof...(Tail) == 0 ? "" : " "), out(std::forward<Tail>(t)...);
+}
+template <class T> bool chmin(T& a, const T& b) { return a > b ? a = b, true : false; }
+template <class T> bool chmax(T& a, const T& b) { return a < b ? a = b, true : false; }
+template <class T> using V = std::vector<T>;
 
 /**
  *    author:  knshnb
