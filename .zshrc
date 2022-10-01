@@ -1,120 +1,93 @@
-# fortune | cowsay | lolcat
-export LC_ALL=en_US.UTF-8
-
-# Path to your oh-my-zsh installation.
-export ZSH=~/dotfiles/.oh-my-zsh
-export LC_ALL=en_US.UTF-8
-
-ZSH_THEME="robbyrussell"
-
-plugins=(
-  git
-)
-
-source $ZSH/oh-my-zsh.sh
-
-alias vim="vim -p"
-# # automatically 'll' after cd
-# cd ()
-# {
-    # builtin cd "$@" && ll
-# }
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/Library/Python/3.7/bin:$PATH"
-
-function template() {
-  cp ~/dotfiles/.competitive_template.cpp "$1.cpp"
-  sed -i "" "s/CREATED_TIMESTAMP/$(date)/g" "$1.cpp"
-}
-
-if [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
-  # open pdf files in linux
-  alias open="xdg-open"
-fi
-
+export HISTFILE=~/.zsh_history
+export SAVEHIST=100000
+setopt SHARE_HISTORY
+# PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+export PATH="$HOME/.cargo/bin:$PATH"
+# export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
+alias kaggle=$HOME/Library/Python/3.8/bin/kaggle
+alias oj=$HOME/Library/Python/3.8/bin/oj
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"  # ls, mv, etc of GNU/Linus
+export LC_ALL=en_US.UTF-8
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# custom alias
+alias vim="vim -p"
+alias ls='ls --color=auto'
+alias l='ls -CF'
+alias ll='ls -t -l -F -G -al'
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# competitive programming
+function template() {
+  if [[ $1 == *.test ]] then;
+    cp ~/.competitive_template.test.cpp "$1.cpp"
+  else
+    cp ~/.competitive_template.cpp "$1.cpp"
+  fi
+  sed -i "" "s/CREATED_TIMESTAMP/$(date)/g" "$1.cpp"
+}
+function dl_problem() {
+  if [ $# -ne 1 ]; then
+    echo "number of argments should be 1"
+    return 1
+  fi
+  dir_name=${1##*/}
+  echo $dir_name
+  mkdir $dir_name
+  cd $dir_name
+  oj d $1
+  template main
+  code main.cpp
+}
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# Zinit
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+## Load a few important annexes, without Turbo
+## (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+### End of Zinit's installer chunk
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+## Example: https://zdharma-continuum.github.io/zinit/wiki/Example-Oh-My-Zsh-setup/
+zinit wait lucid light-mode for \
+  atinit"zicompinit; zicdreplay" \
+      zdharma-continuum/fast-syntax-highlighting \
+  atload"_zsh_autosuggest_start" \
+      zsh-users/zsh-autosuggestions \
+  blockf atpull'zinit creinstall -q .' \
+      zsh-users/zsh-completions
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+setopt promptsubst
+zinit wait lucid for \
+        OMZL::git.zsh \
+  atload"unalias grv" \
+        OMZP::git
+PS1="READY >" # provide a simple prompt till the theme loads
+zinit wait'!' lucid for \
+    OMZL::prompt_info_functions.zsh \
+    OMZT::gnzh
+zinit wait lucid for \
+  atinit"zicompinit; zicdreplay"  \
+        zdharma-continuum/fast-syntax-highlighting \
+      OMZP::colored-man-pages \
+  as"completion" \
+        OMZP::docker/_docker
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
