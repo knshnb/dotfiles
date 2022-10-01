@@ -70,6 +70,14 @@ template <class A, class B, class C> std::string to_string(std::priority_queue<A
     }
     return res + "}";
 }
+template <class A> std::string to_string(std::complex<A> c) {
+    return "(" + to_string(c.real()) + "," + to_string(c.imag()) + ")";
+}
+
+template <class A, class B> std::string to_string(std::pair<A, B> p) {
+    return "(" + to_string(p.first) + ", " + to_string(p.second) + ")";
+}
+
 template <class A> std::string to_string(const A &v) {
     bool first = true;
     std::string res = "{";
@@ -79,14 +87,6 @@ template <class A> std::string to_string(const A &v) {
         res += to_string(x);
     }
     return res += "}";
-}
-
-template <class A> std::string to_string(std::complex<A> c) {
-    return "(" + to_string(c.real()) + "," + to_string(c.imag()) + ")";
-}
-
-template <class A, class B> std::string to_string(std::pair<A, B> p) {
-    return "(" + to_string(p.first) + ", " + to_string(p.second) + ")";
 }
 
 void dump_func() { std::cerr << std::endl; }
