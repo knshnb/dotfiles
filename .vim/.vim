@@ -1,1 +1,0 @@
-/home/tansei/dotfiles/.vim
