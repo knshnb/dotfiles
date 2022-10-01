@@ -4,13 +4,13 @@
     "key": "ctrl+t",
     "command": "workbench.action.tasks.runTask",
     "when": "editorTextFocus",
-    "args": "AtCoder Test"
+    "args": "competitiveTestSample"
   },
   {
     "key": "ctrl+s",
     "command": "workbench.action.tasks.runTask",
     "when": "editorTextFocus",
-    "args": "AtCoder Submit"
+    "args": "competitiveSubmit"
   },
   {
     "key": "ctrl+c",
@@ -25,5 +25,5 @@
     "key": "ctrl+;",
     "command": "workbench.action.focusFirstEditorGroup",
     "when": "terminalFocus"
-  }
+  },
 ]
