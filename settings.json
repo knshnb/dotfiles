@@ -1,13 +1,5 @@
 {
-    "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p", // タグ内の記述はフォーマットしない
-    "html.format.extraLiners": "", // head, body, /html タグの前に改行を入れない
-    "html.format.unformatted": null, // フレージング・コンテンツ（旧インライン要素のようなタグ）はフォーマットしない
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4, // タブのサイズ変更
     "editor.minimap.enabled": false,
-    "markdown-pdf.convertOnSave": false,
-    "markdown-pdf.displayHeaderFooter": false,
-    "window.zoomLevel": 0,
     // "vim.useSystemClipboard": true, // システムのclipboardにコピー
     "vim.visualstar": true,
     "vim.hlsearch": true,
@@ -15,12 +7,13 @@
     "vim.easymotion": true,
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
-        "cpp": "cd $dir && g++ -O0 -std=c++14 -D_MY_DEBUG -D_GLIBCXX_DEBUG $fileName && ./a.out",
-        // "python": "cd $dir && source env/bin/activate && python $fileName",
-        "python": "$pythonPath $fullFileName",
+        "cpp": "cd $dir && g++ -O0 -std=c++17 -Wshadow -Wall -Wno-sign-compare -D_GLIBCXX_DEBUG -include ~/.competitive_local.hpp -I ~/ac-library $fileName && ./a.out",
+        "python": "PYTHONPATH=. $pythonPath $fullFileName",
+        "rust": "cd $dir && RUST_BACKTRACE=1 rustc $fileName && $dir$fileNameWithoutExt",
     },
     "code-runner.saveFileBeforeRun": true,
     "code-runner.preserveFocus": false,
+    "code-runner.ignoreSelection": true,
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "left",
@@ -28,23 +21,39 @@
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
-    "python.pythonPath": "/usr/local/bin/python3",
-    "cSpell.enabledLanguageIds": [
-        "latex",
-        "markdown",
-    ],
-    "[python]": {
-        "editor.tabSize": 4,
-    },
     "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
     "C_Cpp.updateChannel": "Insiders",
-    "C_Cpp.intelliSenseCacheSize": 16,
+    "C_Cpp.intelliSenseCacheSize": 10240,
+    "C_Cpp.default.cppStandard": "c++17",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
     "python.linting.enabled": true,
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "python.formatting.provider": "black",
     "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }, // isort
     "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
     "editor.autoClosingOvertype": "always",
     "git.autofetch": true,
-	"autoDocstring.docstringFormat": "google",
+    "autoDocstring.docstringFormat": "google",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "editor.cursorStyle": "line",
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.autoUpdate": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
 }
