@@ -5,7 +5,6 @@ setopt SHARE_HISTORY
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH="$HOME/.cargo/bin:$PATH"
-# export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
 alias kaggle=$HOME/Library/Python/3.8/bin/kaggle
 alias oj=$HOME/Library/Python/3.8/bin/oj
