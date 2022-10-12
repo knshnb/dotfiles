@@ -65,28 +65,14 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-## Example: https://zdharma-continuum.github.io/zinit/wiki/Example-Oh-My-Zsh-setup/
-zinit wait lucid light-mode for \
-  atinit"zicompinit; zicdreplay" \
-      zdharma-continuum/fast-syntax-highlighting \
-  atload"_zsh_autosuggest_start" \
-      zsh-users/zsh-autosuggestions \
-  blockf atpull'zinit creinstall -q .' \
-      zsh-users/zsh-completions
-
+## https://zdharma-continuum.github.io/zinit/wiki/Example-Oh-My-Zsh-setup/#without_using_turbo_and_for-syntax
 setopt promptsubst
-zinit wait lucid for \
-        OMZL::git.zsh \
-  atload"unalias grv" \
-        OMZP::git
-PS1="READY >" # provide a simple prompt till the theme loads
-zinit wait'!' lucid for \
-    OMZL::prompt_info_functions.zsh \
-    OMZT::gnzh
-zinit wait lucid for \
-  atinit"zicompinit; zicdreplay"  \
-        zdharma-continuum/fast-syntax-highlighting \
-      OMZP::colored-man-pages \
-  as"completion" \
-        OMZP::docker/_docker
-
+zinit snippet OMZL::git.zsh
+zinit ice atload"unalias grv"
+zinit snippet OMZP::git
+zinit for OMZL::prompt_info_functions.zsh OMZT::gnzh
+zinit snippet OMZP::colored-man-pages
+zinit ice as"completion"
+zinit snippet OMZP::docker/_docker
+zinit ice atinit"zicompinit; zicdreplay"
+zinit light zdharma-continuum/fast-syntax-highlighting
